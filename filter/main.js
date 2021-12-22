@@ -1,22 +1,6 @@
 // filter
 
-// dobrar valores
-const numbers = [2, 4, 5, 12, 45]
+// remover duplicados 
+const numbers = [2, 3, 4, 5, 4, 12, 19, 7, 2, 5]
 
-function dobrarNumeros(number) {
-  return number * 2
-}
-
-const dobrar = numbers.map(dobrarNumeros)
-
-// console.log(dobrar);
-
-
-// conversor de fahrenheint para celsius 
-const fahrenheint = [0, 32, 45, 50, 75, 80, 120]
-
-const convertToCelsius = fahrenheint.map( number => Math.round((number - 32) * 5/9))
-
-
-console.log(convertToCelsius);
-
+const removeDup = numbers.filter( (elem, index, arr) => arr.indexOf )
