@@ -16,11 +16,11 @@ async function getPeople() {
 
 // somente mulheres
 
-// getPeople().then( data => {
-//   const people = data.results
+getPeople().then( data => {
+  const people = data.results
 
-//   console.log(people.filter( e => e.gender === "female"));
-// } )
+  console.log(people.filter( e => e.gender === "female"));
+} )
 
 
 // trabalhando com dados 
@@ -38,9 +38,19 @@ getPeople().then( data => {
   }
   
   console.log(people);
-  console.table(people);
+  // console.table(people);
 
 } )
 
 // somente pessoas abaixo de 30 anos 
 
+getPeople().then( data => {
+  const result = data.results
+  const people = []
+
+  for (let e of result){
+    people.filter( p => e < 40 )
+  }
+
+  console.log(people);
+})
