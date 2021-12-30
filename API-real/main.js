@@ -48,9 +48,17 @@ getPeople().then( data => {
   const result = data.results
   const people = []
 
-  for (let e of result){
-    people.filter( p => e < 40 )
+  const filtered = result.filter( p => p.dob.age > 40)
+  
+  for (let p of filtered){
+    people.push({
+      "Nome" : `${p.name.first} ${p.name.last}`,
+      "Sexo" : p.gender,
+      "Idade" : p.dob.age
+    })
   }
+  
+  
 
   console.log(people);
 })
